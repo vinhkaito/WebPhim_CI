@@ -1,5 +1,13 @@
-<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <title>aa</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+</head>
+<body>
 
 <?php
 $this->load->view('modules/header');
@@ -14,3 +22,9 @@ $this->load->view('modules/footer');
 ?>
 
 
+<!-- Bootstrap JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
