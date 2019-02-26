@@ -5,7 +5,7 @@
     <meta name="viewport">
     <title>aa</title>
 
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
 </head>
 <body>
 
@@ -24,7 +24,7 @@ $this->load->view('modules/footer');
 
 <!-- Bootstrap JavaScript -->
 <script src="js/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>
