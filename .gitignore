@@ -29,3 +29,12 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 /tests/tests/
 /tests/results/
+
+/tmp/*
+/logs/*
+/nbproject/*
+/webroot/.sass-cache/*
+/webroot/all*.js
+/.idea/*
+*/.idea/*
+

@@ -6,7 +6,7 @@
     <title>WebPhimCI</title>
 
     <link rel="stylesheet" href="<?= base_url() ?>./bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="<?= base_url() ?>./css/all.css"/>
+    <link rel="stylesheet" href="<?= base_url() ?>./webroot/css/all.css"/>
 </head>
 <body>
     <?php
