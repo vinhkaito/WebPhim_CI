@@ -1,0 +1,86 @@
+/*===================
+PARAMATERS=====================*/
+
+
+/*===================
+COLOR=====================*/
+
+
+/*===================
+FONTS=====================*/
+@mixin FontRegular ( $value, $line:1.1 ) {
+	font-family: 'MyriadProRegular', arial, helvetica, sans-serif;
+	font-size: $value;
+	line-height: $line;
+	font-weight: normal;
+}
+
+@mixin FontBold ( $value, $line:1.1 ) {
+	font-family: 'MyriadPro-BoldCond', arial, helvetica, sans-serif;
+	font-size: $value;
+	line-height: $line;
+	font-weight: normal;
+}
+
+/*===================
+FUNCTIONS=====================*/
+@function em($size) {
+	@return #{$size / 13px}em;
+}
+
+/*===================
+MIXIN=====================*/
+@mixin animate($time){
+	-webkit-transition: all $time;
+	-moz-transition: all $time;
+	transition: all $time;
+}
+
+@mixin selectNone(){
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */
+}
+
+
+@mixin boderRadius($value)
+{
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	border-radius: $value;
+}
+
+@mixin borderCorner ($value) {
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	border-radius: $value;
+}
+
+@mixin setOpacity ($value) {
+	opacity: $value;
+	filter: alpha(opacity=$value*100);
+}
+
+@mixin backgroundCover()
+{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@mixin displayFlex()
+{
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+	-webkit-justify-content: center; /* Safari 6.1+ */
+	justify-content: center;
+
+	-webkit-align-items: center; /* Safari 7.0+ */
+	align-items: center;
+}

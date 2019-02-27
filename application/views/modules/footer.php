@@ -1,1 +1,5 @@
-ccc
+<footer>
+    <div class="container">
+
+    </div>
+</footer>
