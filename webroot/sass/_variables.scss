@@ -9,17 +9,24 @@ COLOR=====================*/
 /*===================
 FONTS=====================*/
 @mixin FontRegular ( $value, $line:1.1 ) {
-	font-family: 'MyriadProRegular', arial, helvetica, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-size: $value;
 	line-height: $line;
-	font-weight: normal;
+	font-weight: 400;
+}
+
+@mixin FontSemiBold ( $value, $line:1.1 ) {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: $value;
+	line-height: $line;
+	font-weight: 600;
 }
 
 @mixin FontBold ( $value, $line:1.1 ) {
-	font-family: 'MyriadPro-BoldCond', arial, helvetica, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-size: $value;
 	line-height: $line;
-	font-weight: normal;
+	font-weight: 700;
 }
 
 /*===================
