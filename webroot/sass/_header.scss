@@ -1,12 +1,11 @@
 header {
   background: $dark;
-  padding: 20px 0;
   color: $white;
 
-
-
   .logo-text {
-    @include FontSemiBold(16px);
+    @include FontSemiBold(32px, 1.4);
+    color: $white;
+    padding-left: 5px;
   }
 
   .group-item {
@@ -18,24 +17,14 @@ header {
     }
   }
 
-  .dropdown-menu a{
-    color: $black;
-  }
-
-  .dropdown-menu {
-    -webkit-columns : 4 auto;
-    -moz-columns : 4 auto;
-    columns: 4 auto;
-  }
-
-  div:last-child {
-
-    .dropdown-menu {
-      -webkit-columns : 1 auto;
-      -moz-columns : 1 auto;
-      columns: 1 auto;
-    }
-  }
-
-
 }
+//
+//@media (min-width: 768px) {
+//
+//  header {
+//
+//    .logo-text {
+//      font-size: 1vw;
+//    }
+//  }
+//}
