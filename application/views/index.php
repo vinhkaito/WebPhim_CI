@@ -7,12 +7,13 @@
 
     <link rel="stylesheet" href="<?= base_url() ?>./bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="<?= base_url() ?>./webroot/css/all.css"/>
+    <link rel="stylesheet" href="<?= base_url() ?>./webroot/font-awesome/css/font-awesome.min.css"/>
 </head>
-<body>
+<body style="background-color: $dark">
     <?php
     $this->load->view('modules/header');
     ?>
-    <main role="main" class="container">
+    <main role="main" class="container-fluid">
         <?php
         $this->load->view('modules/home');
         ?>
