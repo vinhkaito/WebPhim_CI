@@ -99,3 +99,20 @@
   //}
 
 }
+@media (max-width: 1200px) {
+
+  .search-box {
+    margin-left: 0;
+    margin-right: -10px !important;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .search-box {
+    margin-left: 0;
+    margin-right: 0 !important;
+  }
+
+}

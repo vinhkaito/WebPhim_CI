@@ -10,7 +10,7 @@
                     <div class="anime-item">
                         <div class="anime-thumbnail">
                             <a href="#">
-                                <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/Meiji-Tokyo-Renka.jpg"" alt="Meiji Tokyo Renka">
+                                <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/Meiji-Tokyo-Renka.jpg" alt="Meiji Tokyo Renka">
                                 <div class="thumbnail-dark"></div>
                                 <i class="fa fa-play"></i>
                                 <span class="anime-name">
@@ -29,7 +29,7 @@
                     <div class="anime-item">
                         <div class="anime-thumbnail">
                             <a href="#">
-                                <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/Tate-no-Yuusha-no-Nariagari.jpg"" alt="Tate no Yuusha no Nariagari">
+                                <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/Tate-no-Yuusha-no-Nariagari.jpg" alt="Tate no Yuusha no Nariagari">
                                 <div class="thumbnail-dark"></div>
                                 <i class="fa fa-play"></i>
                                 <span class="anime-name">
@@ -48,7 +48,7 @@
                     <div class="anime-item">
                         <div class="anime-thumbnail">
                             <a href="#">
-                                <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/Black-Clover.jpg"" alt="Black Clover">
+                                <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/Black-Clover.jpg" alt="Black Clover">
                                 <div class="thumbnail-dark"></div>
                                 <i class="fa fa-play"></i>
                                 <span class="anime-name">
@@ -67,7 +67,7 @@
                     <div class="anime-item">
                         <div class="anime-thumbnail">
                             <a href="#">
-                                <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/B-Project-Zecchou-Emotion.jpg"" alt="B-Project: Zecchou*Emotion">
+                                <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/B-Project-Zecchou-Emotion.jpg" alt="B-Project: Zecchou*Emotion">
                                 <div class="thumbnail-dark"></div>
                                 <i class="fa fa-play"></i>
                                 <span class="anime-name">
@@ -85,7 +85,7 @@
                     <div class="anime-item">
                         <div class="anime-thumbnail">
                             <a href="#">
-                                <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/Watashi-ni-Tenshi-ga-Maiorita!.jpg"" alt="Watashi ni Tenshi ga Maiorita!">
+                                <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/Watashi-ni-Tenshi-ga-Maiorita!.jpg" alt="Watashi ni Tenshi ga Maiorita!">
                                 <div class="thumbnail-dark"></div>
                                 <i class="fa fa-play"></i>
                                 <span class="anime-name">
@@ -103,7 +103,7 @@
                     <div class="anime-item">
                         <div class="anime-thumbnail">
                             <a href="#">
-                                <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/High-Speed-Free-Starting-Days.jpg"" alt="High☆Speed!: Free! Starting Days">
+                                <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/High-Speed-Free-Starting-Days.jpg" alt="High☆Speed!: Free! Starting Days">
                                 <div class="thumbnail-dark"></div>
                                 <i class="fa fa-play"></i>
                                 <span class="anime-name">
@@ -364,7 +364,89 @@
             </div>
             <div class="col-lg-3 t-w">
                 <div class="row">
-                    <div class="fb-page mb-2 fb_iframe_widget" data-href="https://www.facebook.com/anivn.net/" data-width="500" data-tabs="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=289566651411449&amp;container_width=255&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fanivn.net%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;width=500"><span style="vertical-align: bottom; width: 255px; height: 196px;"><iframe name="f362c007a9f32a" width="500px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:page Facebook Social Plugin" src="https://www.facebook.com/v3.0/plugins/page.php?adapt_container_width=true&amp;app_id=289566651411449&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fvy-MhgbfL4v.js%3Fversion%3D44%23cb%3Df10c9d4686d0e2c%26domain%3Danivn.net%26origin%3Dhttps%253A%252F%252Fanivn.net%252Ff3e71f594a4bd9c%26relation%3Dparent.parent&amp;container_width=255&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fanivn.net%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;width=500" style="border: none; visibility: visible; width: 255px; height: 196px;" __idm_frm__="679" class=""></iframe></span></div>
+                    <div class="col-lg-12">
+<!--                        Bật thông báo-->
+                        <a href="#" class="btn btn-block btn-sm btn-outline-danger mb-2 push-btn" data-tootik="Nhận thông báo khi có tập mới" data-tootik-conf="danger"><i class="fa fa-bell-o"></i> Bật thông báo</a>
+<!--                        Anime vừa xem-->
+                        <div class="mb-2">
+                            <a class="btn btn-outline-success btn-block btn-sm" id="watched-list-btn" data-toggle="collapse" href="#watched-list" aria-expanded="false">
+                                <i class="fa fa-clock-o"></i> Anime vừa xem
+                            </a>
+                            <div class="collapse" id="watched-list">
+                                <div class="p-2"><a href="#">Vanquished Queens</a><a href="#">Shuudengo, Capsule Hotel de, Joushi ni Binetsu Tsutawaru Yoru.</a><a href="#">Joshiochi!: 2-kai kara Onnanoko ga... Futtekita!?</a></div>
+                            </div>
+                        </div>
+<!--                        Xem sau-->
+                        <div class="bookmark">
+                            <a class="btn btn-outline-primary btn-sm btn-block" data-toggle="collapse" href="#" aria-expanded="false">
+                                <i class="fa fa-bookmark"></i> Xem sau <span class="badge badge-default bookmark-count">0</span>
+                            </a>
+                            <div class="collapse" id="anime-bookmark">
+                                <p class="pt-2">Ấn <button class="btn btn-outline-primary btn-sm"><i class="fa fa-bookmark"></i> Xem sau</button> ở mỗi anime để thêm vào danh sách</p>
+                            </div>
+                        </div>
+                        <hr>
+<!--                        Xem Nhiều Trong Ngày-->
+                        <div class="most-view">
+                            <h6 class="title"><i class="fa fa-star-o"></i> Xem Nhiều Trong Ngày</h6>
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-12 anime-list-item">
+                                    <a class="pull-left" href="#">
+                                        <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/Meiji-Tokyo-Renka.jpg" alt="Meiji Tokyo Renka">
+                                    </a>
+                                    <div class="anime-list-item-body">
+                                        <a class="pull-left" href="#">Meiji Tokyo Renka</a>
+                                        <p class="text-muted"><i class="fa fa-eye"></i> Lượt xem: 59</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-12 anime-list-item">
+                                    <a class="pull-left" href="#">
+                                        <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/Tate-no-Yuusha-no-Nariagari.jpg" alt="Tate no Yuusha no Nariagari">
+                                    </a>
+                                    <div class="anime-list-item-body">
+                                        <a class="pull-left" href="#">Tate no Yuusha no Nariagari</a>
+                                        <p class="text-muted"><i class="fa fa-eye"></i> Lượt xem: 49</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-12 anime-list-item">
+                                    <a class="pull-left" href="#">
+                                        <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/Black-Clover.jpg" alt="Black Clover">
+                                    </a>
+                                    <div class="anime-list-item-body">
+                                        <a class="pull-left" href="#">Black Clover</a>
+                                        <p class="text-muted"><i class="fa fa-eye"></i> Lượt xem: 39</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-12 anime-list-item">
+                                    <a class="pull-left" href="#">
+                                        <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/B-Project-Zecchou-Emotion.jpg" alt="B-Project: Zecchou*Emotion">
+                                    </a>
+                                    <div class="anime-list-item-body">
+                                        <a class="pull-left" href="#">B-Project: Zecchou*Emotion</a>
+                                        <p class="text-muted"><i class="fa fa-eye"></i> Lượt xem: 29</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-12 anime-list-item">
+                                    <a class="pull-left" href="#">
+                                        <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/Watashi-ni-Tenshi-ga-Maiorita!.jpg" alt="Watashi ni Tenshi ga Maiorita!">
+                                    </a>
+                                    <div class="anime-list-item-body">
+                                        <a class="pull-left" href="#">Watashi ni Tenshi ga Maiorita!</a>
+                                        <p class="text-muted"><i class="fa fa-eye"></i> Lượt xem: 19</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-12 anime-list-item">
+                                    <a class="pull-left" href="#">
+                                        <img class="anime-thumbnail" src="<?= base_url() ?>./webroot/images/High-Speed-Free-Starting-Days.jpg" alt="High☆Speed!: Free! Starting Days">
+                                    </a>
+                                    <div class="anime-list-item-body">
+                                        <a class="pull-left" href="#">High☆Speed!: Free! Starting Days</a>
+                                        <p class="text-muted"><i class="fa fa-eye"></i> Lượt xem: 09</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

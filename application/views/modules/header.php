@@ -1,8 +1,8 @@
 <header>
     <div class="container">
-        <a class="navbar-brand logo-text d-md-block d-sm-none d-none " href="#">WebPhimCI.com</a>
+        <a class="navbar-brand logo-text d-lg-block d-md-none d-sm-none d-none " href="#">WebPhimCI.com</a>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-block d-lg-flex">
-            <a class="navbar-brand logo-text d-md-none d-sm-inline-block d-inline-block" href="#">WebPhimCI.com</a>
+            <a class="navbar-brand logo-text d-lg-none d-md-inline-block d-sm-inline-block d-inline-block" href="#">WebPhimCI.com</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
