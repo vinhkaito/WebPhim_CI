@@ -43,60 +43,60 @@
     border-top-right-radius: 0;
   }
 
-  // hover show descreption
-  //.anime-info {
-  //  z-index: 999;
-  //  width: 30%;
-  //  height: 50%;
-  //  text-align: justify;
-  //  @include FontRegular(13.5px,1.4);
-  //  position: absolute;
-  //  top: 8%;
-  //  bottom: 0;
-  //  left: 20.5%;
-  //  right: 0;
-  //  background: $black-light;
-  //  color: #fff;
-  //  visibility: hidden;
-  //  opacity: 1;
-  //  transition: opacity .2s, visibility .2s;
-  //  text-overflow: ellipsis;
-  //  padding: 0 15px;
-  //  border-radius: 18px;
-  //}
-  //
-  //.anime-info:before, .anime-info:after {
-  //  right: 100%;
-  //  top: 50%;
-  //  border: solid transparent;
-  //  content: " ";
-  //  height: 0;
-  //  width: 0;
-  //  position: absolute;
-  //  pointer-events: none;
-  //}
-  //
-  //.anime-info:after {
-  //  border-color: rgba(136, 183, 213, 0);
-  //  border-right-color: $black-light;
-  //  border-width: 5px;
-  //  margin-top: -5px;
-  //}
-  //.anime-info:before {
-  //  border-color: rgba(194, 225, 245, 0);
-  //  border-right-color: $black-light;
-  //  border-width: 6px;
-  //  margin-top: -6px;
-  //}
-  //
-  //.anime-item:hover .anime-info {
-  //  top: 8%;
-  //  bottom: 0;
-  //  left: 20.5%;
-  //  right: 0;
-  //  visibility: visible;
-  //  opacity: 1;
-  //}
+   //hover show descreption
+  .anime-info {
+    z-index: 999;
+    width: 30%;
+    height: 50%;
+    text-align: justify;
+    @include FontRegular(13.5px,1.4);
+    position: absolute;
+    top: 8%;
+    bottom: 0;
+    left: 20.5%;
+    right: 0;
+    background: $black-light;
+    color: #fff;
+    visibility: hidden;
+    opacity: 1;
+    transition: opacity .2s, visibility .2s;
+    text-overflow: ellipsis;
+    padding: 0 15px;
+    border-radius: 18px;
+  }
+  
+  .anime-info:before, .anime-info:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .anime-info:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-right-color: $black-light;
+    border-width: 5px;
+    margin-top: -5px;
+  }
+  .anime-info:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-right-color: $black-light;
+    border-width: 6px;
+    margin-top: -6px;
+  }
+  
+  .anime-item:hover .anime-info {
+    top: 8%;
+    bottom: 0;
+    left: 20.5%;
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+  }
 
 }
 @media (max-width: 1200px) {

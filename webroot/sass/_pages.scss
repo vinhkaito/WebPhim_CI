@@ -1,3 +1,117 @@
 section.page {
 
+.title {
+
+    h5 {
+      @include FontBold(20px);
+      color: $white;
+    }
+  }
+
+  .items {
+    padding-bottom: 10px;
+  }
+
+  .anime-thumbnail {
+    width: 100%;
+    position: relative;
+    border-radius: .25rem;
+  }
+  .anime-item a {
+    text-decoration: none;
+  }
+  .anime-item .anime-thumbnail {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .anime-item .anime-name {
+    z-index: 1;
+    position: relative;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    padding: 2px 4px 2px 4px;
+    background-color: $white;
+    font-size: .875rem;
+    border-radius: .25rem;
+    border-top: 1px solid rgba(0,0,0,.2);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+   //hover show descreption
+  .anime-info {
+    z-index: 999;
+    width: 30%;
+    height: 50%;
+    text-align: justify;
+    @include FontRegular(13.5px,1.4);
+    position: absolute;
+    top: 8%;
+    bottom: 0;
+    left: 20.5%;
+    right: 0;
+    background: $black-light;
+    color: #fff;
+    visibility: hidden;
+    opacity: 1;
+    transition: opacity .2s, visibility .2s;
+    text-overflow: ellipsis;
+    padding: 0 15px;
+    border-radius: 18px;
+  }
+  
+  .anime-info:before, .anime-info:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .anime-info:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-right-color: $black-light;
+    border-width: 5px;
+    margin-top: -5px;
+  }
+  .anime-info:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-right-color: $black-light;
+    border-width: 6px;
+    margin-top: -6px;
+  }
+  
+  .anime-item:hover .anime-info {
+    top: 8%;
+    bottom: 0;
+    left: 20.5%;
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+
+}
+@media (max-width: 1200px) {
+
+  .search-box {
+    margin-left: 0;
+    margin-right: -10px !important;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .search-box {
+    margin-left: 0;
+    margin-right: 0 !important;
+  }
 }
