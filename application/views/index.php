@@ -16,7 +16,7 @@
     <main role="main" class="container-fluid">
         <?php
         //$this->load->view('modules/home');
-        $this->load->view('page/infomation');
+        $this->load->view('page/watchmovie');
         ?>
     </main>
     <?php
