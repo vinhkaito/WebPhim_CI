@@ -12,6 +12,10 @@ class Home_model extends MY_Model
     public function countSeries()
     {
         $query = $this->db->query("SELECT series_id FROM `episode` GROUP BY series_id");
+        //$query = $this->db->select('series.*, MAX(ep) as lastEpisode')
+        //->join('episode', 'series.id = episode.series_id', 'inner')
+        //->group_by('series.id')
+        //->get('series');
         return $query->num_rows();
     }
     public function get($table)
@@ -55,12 +59,14 @@ class Home_model extends MY_Model
         }
         if($id) return $series[0];
         return $series;
+        //$this->getSeriesEP($series['ep'])
     }
     public function getSeriesName($id = '')
     {
         $this->db->select('id, name');
         if($id) $this->db->where('id', $id);
         $series = $this->db->get('series')->result_array();
+        //$series = $this->db->query("SELECT id, name FROM series")->result_array();
         foreach ($series as $id => $name) {
             $result[$name['id']] = $name['name'];
         }
@@ -69,6 +75,9 @@ class Home_model extends MY_Model
     public function getGenres()
     {
         $a = $this->db->get('genres')->result();
+        /*foreach ($a as $key => $value) {
+            $genres[$value['id']] = $value['name'];
+        }*/
         return $a;
     }
     public function getGenreName($id)
@@ -101,6 +110,7 @@ class Home_model extends MY_Model
             ->get('episode');
         $seriesEpisodes = $query->result();
         $fansubData = $this->fansubData;
+        //$fansub[0] = "Unknown";
         foreach($fansubData as $fansub)
             $fansubs[$fansub->id] = $fansub;
         $fansubs[0] = (object)['id' => 0, 'name' => 'Unknown'];
@@ -111,6 +121,13 @@ class Home_model extends MY_Model
         }
         return $episodes;
     }
+    /*	public function saveSeries($data, $id)
+        {
+            $this->db->set($data);
+            $this->db->where('id', $id);
+            $this->db->update('series');
+            return true;
+        }*/
     public function getEpisodes($sid){
         $this->db->where('series', $sid);
         return $this->db->get('episode')->row();
@@ -122,6 +139,7 @@ class Home_model extends MY_Model
         $series = $this->getSeries($c['series_id']);
         foreach ($series['episodes'] as $fansub_name => $fansub) {
             foreach($fansub['episodes'] as $episode => $episode_id)
+                //print_r($episodes);
                 if($c['fansub_id'] == $fansub['id'] && $c['ep']+1 == $episode) $series['next_ep'] = $episode_id;
         }
         $z = array(
@@ -181,6 +199,10 @@ class Home_model extends MY_Model
 			ORDER BY episode.id DESC LIMIT $limit
 		");
         return $query->result();
+        /*$query => $this->db->where('season', $season)
+                            ->limit($limit)
+                            ->order_by('')*/
+
     }
     public function getNotify()
     {
