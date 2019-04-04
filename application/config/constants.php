@@ -42,7 +42,7 @@ defined('DIR_WRITE_MODE')  OR define('DIR_WRITE_MODE', 0755);
 defined('FOPEN_READ')                           OR define('FOPEN_READ', 'rb');
 defined('FOPEN_READ_WRITE')                     OR define('FOPEN_READ_WRITE', 'r+b');
 defined('FOPEN_WRITE_CREATE_DESTRUCTIVE')       OR define('FOPEN_WRITE_CREATE_DESTRUCTIVE', 'wb'); // truncates existing file data, use with care
-defined('FOPEN_READ_WRITE_CREATE_DESTRUCTIVE')  OR define('FOPEN_READ_WRITE_CREATE_DESTRUCTIVE', 'w+b'); // truncates existing file data, use with care
+defined('FOPEN_READ_WRITE_CREATE_DESCTRUCTIVE') OR define('FOPEN_READ_WRITE_CREATE_DESTRUCTIVE', 'w+b'); // truncates existing file data, use with care
 defined('FOPEN_WRITE_CREATE')                   OR define('FOPEN_WRITE_CREATE', 'ab');
 defined('FOPEN_READ_WRITE_CREATE')              OR define('FOPEN_READ_WRITE_CREATE', 'a+b');
 defined('FOPEN_WRITE_CREATE_STRICT')            OR define('FOPEN_WRITE_CREATE_STRICT', 'xb');
@@ -83,3 +83,28 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+/*
+|--------------------------------------------------------------------------
+| Custom Constants (added by CI Bootstrap)
+|--------------------------------------------------------------------------
+| Constants to be used in both Frontend and other modules
+|
+*/
+if (!(PHP_SAPI === 'cli' OR defined('STDIN')))
+{
+	// Base URL with directory support
+	$protocol = (!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS'])!== 'off') ? 'https' : 'http';
+	$base_url = $protocol.'://'.$_SERVER['HTTP_HOST'];
+	$base_url.= dirname($_SERVER['SCRIPT_NAME']);
+	define('BASE_URL', $base_url);
+	
+	// For API prefix in Swagger annotation (/application/modules/api/swagger/info.php)
+	define('API_HOST', $_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME']));
+}
+
+define('CI_BOOTSTRAP_REPO',			'https://github.com/waifung0207/ci_bootstrap_3');
+define('CI_BOOTSTRAP_VERSION',		'Build 20160614');	// will follow semantic version (e.g. v1.x.x) after first stable launch
+
+// Upload paths
+//define('UPLOAD_COVER_PHOTO',	'assets/uploads/cover_photos');
