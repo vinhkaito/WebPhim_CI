@@ -79,7 +79,7 @@ class Home_model extends MY_Model
     public function getSeriesGenres($id)
     {
         $data = $this->db->select('genres.id, genres.name')
-            ->join('genres', 'series_genres.genres.id = genres.id', 'inner')
+            ->join('genres', 'series_genres.genres_id = genres.id', 'inner')
             ->where('series_id', $id)
             ->get('series_genres');
         return $data->result();
@@ -104,7 +104,7 @@ class Home_model extends MY_Model
         $fansubData = $this->fansubData;
         foreach($fansubData as $fansub)
             $fansubs[$fansub->id] = $fansub;
-        $fansubs[0] = (object)['id' => 0, 'name'=> 'Unknown'];
+        $fansubs[0] = (object)['id' => 0, 'name' => 'Unknown'];
         foreach ($seriesEpisodes as $k => $v) {
             $id = $v->fansub_id;
             $episodes[$fansubs[$v->fansub_id]->id] = $fansubs[$v->fansub_id];
@@ -124,8 +124,7 @@ class Home_model extends MY_Model
         $series = $this->getSeries($c['series_id']);
         foreach ($series['episodes'] as $fansub_name => $fansub) {
             foreach ($fansub['episodes'] as $episode => $episode_id) {
-                if($c['fansub_id'] == $fansub['id'] && $c['ep']+1 == $episode)
-                    $series['next_ep'] = $episode_id;
+                if($c['fansub_id'] == $fansub['id'] && $c['ep']+1 == $episode) $series['next_ep'] = $episode_id;
             }
         }
         $z = array(
@@ -163,11 +162,11 @@ class Home_model extends MY_Model
             ->group_by('episode.series_id')
             ->limit($limit)
             ->get('series');
-            return $query->result();
+        return $query->result();
     }
     public function getAnimeSeasonal($season, $limit = 12)
     {
-        $query = $this->db->where("season", $season)
+        $query = $this->db->where('season', $season)
             ->limit($limit)
             ->order_by('total_views', 'desc')
             ->get('series');
@@ -175,12 +174,14 @@ class Home_model extends MY_Model
     }
     public function getRecentUpdateSeason($season, $limit = 18)
     {
-        $query = $this->db->query("SELECT episode.id as lastEPID, episode.ep as lastEpisode, series.*
+        $query = $this->db->query("
+        SELECT episode.id as lastEPID, episode.ep as lastEpisode, series.*
         FROM episode
-        LEFT JOIN series ON episode.series id = series.id
-        WHERE episode.id IN (SELECT MAX(id) FROM episode GROUP BY series id) AND series.season = '$season'
-        ORDER BY episode.id DESC LIMIT $limit");
-        return $query->reuslt();
+        LEFT JOIN series ON episode.series_id = series.id
+        WHERE episode.id IN (SELECT MAX(id) FROM episode GROUP BY series_id) AND series.season = '$season'
+        ORDER BY episode.id DESC LIMIT $limit
+        ");
+        return $query->result();
     }
 
     public function getNotify()
